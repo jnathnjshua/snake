@@ -72,8 +72,8 @@ class NeuralNetwork:
         :param filename_weights: file containing saved weights
         :param filename_biases: file containing saved biases
         """
-        self.weights = np.load(filename_weights)
-        self.biases = np.load(filename_biases)
+        self.weights = np.load(filename_weights, allow_pickle = True)
+        self.biases = np.load(filename_biases, allow_pickle = True)
 
     def render(self, window, vision):
         """
